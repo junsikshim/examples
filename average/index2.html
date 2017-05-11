@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>평균값 계산기</title>
+
+    <script type="text/javascript">
+        // 총합을 저장하기 위한 변수
+        var sum = 0;
+
+        // i가 1부터 10이 될 때 까지 순차적으로 1씩 증가
+        for (var i = 1; i <= 10; i++) {
+            var value = prompt("숫자를 입력해주세요.");
+
+            // 입력받은 문자열을 정수로 변환하여 총합 변수에 더함
+            sum += parseInt(value);
+        }
+
+        var avg = sum / 10;
+
+        alert("평균값: " + avg);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

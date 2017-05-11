@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>평균값 계산기</title>
+
+    <script type="text/javascript">
+        // 입력받은 갯수를 정수로 변환하여 변수에 저장
+        var total = parseInt(prompt("갯수를 입력해주세요."));
+        var sum = 0;
+
+        for (var i = 1; i <= total; i++) {
+            var value = prompt("숫자를 입력해주세요.");
+            sum += parseInt(value);
+        }
+
+        var avg = sum / total;
+
+        alert("평균값: " + avg);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
