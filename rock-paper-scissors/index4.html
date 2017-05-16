@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>가위, 바위, 보!</title>
+
+    <style>
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        // '가위', '바위', '보' 버튼 클릭 핸들러
+        function onButtonClick(userInput) {
+            var comInput;
+            var rnd = Math.random();
+
+            if (rnd < 0.33) {
+                comInput = "가위";
+            } else if (rnd < 0.66) {
+                comInput = "바위";
+            } else {
+                comInput = "보";
+            }
+
+            // 반복되는 문자열을 변수로 만듬
+            var result = "컴퓨터: " + comInput + " - ";
+
+            if (userInput === "가위") {
+                if (comInput === "가위") {
+                    result += "비겼습니다.";
+                } else if (comInput === "바위") {
+                    result += "졌습니다...";
+                } else {
+                    result += "이겼습니다!!";
+                }
+            } else if (userInput === "바위") {
+                if (comInput === "가위") {
+                    result += "이겼습니다!!";
+                } else if (comInput === "바위") {
+                    result += "비겼습니다.";
+                } else {
+                    result += "졌습니다...";
+                }
+            } else {
+                if (comInput === "가위") {
+                    result += "졌습니다...";
+                } else if (comInput === "바위") {
+                    result += "이겼습니다!!";
+                } else {
+                    result += "비겼습니다.";
+                }
+            }
+
+            alert(result);
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <button onclick="onButtonClick('가위')">가위</button>
+        <button onclick="onButtonClick('바위')">바위</button>
+        <button onclick="onButtonClick('보')">보</button>
+    </div>
+</body>
+</html>
