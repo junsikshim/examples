@@ -25,31 +25,36 @@
                 comInput = "보";
             }
 
+            // 반복되는 문자열을 변수로 만듬
+            var result = "컴퓨터: " + comInput + " - ";
+
             if (userInput === "가위") {
                 if (comInput === "가위") {
-                    alert("컴퓨터: " + comInput + " - 비겼습니다.");
+                    result += "비겼습니다.";
                 } else if (comInput === "바위") {
-                    alert("컴퓨터: " + comInput + " - 졌습니다...");
+                    result += "졌습니다...";
                 } else {
-                    alert("컴퓨터: " + comInput + " - 이겼습니다!!");
+                    result += "이겼습니다!!";
                 }
             } else if (userInput === "바위") {
                 if (comInput === "가위") {
-                    alert("컴퓨터: " + comInput + " - 이겼습니다!!");
+                    result += "이겼습니다!!";
                 } else if (comInput === "바위") {
-                    alert("컴퓨터: " + comInput + " - 비겼습니다.");
+                    result += "비겼습니다.";
                 } else {
-                    alert("컴퓨터: " + comInput + " - 졌습니다...");
+                    result += "졌습니다...";
                 }
             } else {
                 if (comInput === "가위") {
-                    alert("컴퓨터: " + comInput + " - 졌습니다...");
+                    result += "졌습니다...";
                 } else if (comInput === "바위") {
-                    alert("컴퓨터: " + comInput + " - 이겼습니다!!");
+                    result += "이겼습니다!!";
                 } else {
-                    alert("컴퓨터: " + comInput + " - 비겼습니다.");
+                    result += "비겼습니다.";
                 }
             }
+
+            alert(result);
         }
 
     </script>

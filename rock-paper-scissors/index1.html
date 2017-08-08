@@ -20,30 +20,34 @@
 
         var userInput = prompt("가위, 바위, 보!");
 
-        // 컴퓨터 패와 유저의 패를 비교
-        if (userInput === "가위") {
-            if (comInput === "가위") {
-                alert("컴퓨터: " + comInput + " - 비겼습니다.");
-            } else if (comInput === "바위") {
-                alert("컴퓨터: " + comInput + " - 졌습니다...");
-            } else {
-                alert("컴퓨터: " + comInput + " - 이겼습니다!!");
-            }
-        } else if (userInput === "바위") {
-            if (comInput === "가위") {
-                alert("컴퓨터: " + comInput + " - 이겼습니다!!");
-            } else if (comInput === "바위") {
-                alert("컴퓨터: " + comInput + " - 비겼습니다.");
-            } else {
-                alert("컴퓨터: " + comInput + " - 졌습니다...");
-            }
+        if (userInput !== "가위" && userInput !== "바위" && userInput !== "보") {
+            alert("가위, 바위, 보 중 하나를 입력해야 합니다!");
         } else {
-            if (comInput === "가위") {
-                alert("컴퓨터: " + comInput + " - 졌습니다...");
-            } else if (comInput === "바위") {
-                alert("컴퓨터: " + comInput + " - 이겼습니다!!");
-            } else {
-                alert("컴퓨터: " + comInput + " - 비겼습니다.");
+            // 컴퓨터 패와 유저의 패를 비교
+            if (userInput === "가위") {
+                if (comInput === "가위") {
+                    alert("컴퓨터: " + comInput + " - 비겼습니다.");
+                } else if (comInput === "바위") {
+                    alert("컴퓨터: " + comInput + " - 졌습니다...");
+                } else if (comInput === "보") {
+                    alert("컴퓨터: " + comInput + " - 이겼습니다!!");
+                }
+            } else if (userInput === "바위") {
+                if (comInput === "가위") {
+                    alert("컴퓨터: " + comInput + " - 이겼습니다!!");
+                } else if (comInput === "바위") {
+                    alert("컴퓨터: " + comInput + " - 비겼습니다.");
+                } else if (comInput === "보") {
+                    alert("컴퓨터: " + comInput + " - 졌습니다...");
+                }
+            } else if (userInput === "보") {
+                if (comInput === "가위") {
+                    alert("컴퓨터: " + comInput + " - 졌습니다...");
+                } else if (comInput === "바위") {
+                    alert("컴퓨터: " + comInput + " - 이겼습니다!!");
+                } else if (comInput === "보") {
+                    alert("컴퓨터: " + comInput + " - 비겼습니다.");
+                }
             }
         }
 

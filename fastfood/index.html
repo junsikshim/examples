@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>패스트푸드점 찾기</title>
+
+    <link href="css/styles.css" rel="stylesheet"/>
+
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/fastfood.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="title">패스트푸드점 찾기</div>
+        <div class="div-search">
+            <input id="txt-search" type="text"/>
+            <button class="btn-search">검색</button>
+        </div>
+    </div>
+    <div class="body">
+        <div class="div-total"></div>
+        <div class="div-list"></div>
+    </div>
+    <div class="paging"></div>
+</div>
+
+<div id="item-template">
+    <div class="item-no"></div>
+    <div class="item-detail">
+        <div class="item-name"></div>
+        <div class="item-addr"></div>
+    </div>
+</div>
+
+</body>
+</html>
