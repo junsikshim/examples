@@ -5,27 +5,32 @@
     <title>평균값 계산기</title>
 
     <script>
-        /*
-             평균값 계산기
+        var value1 = prompt('1번 숫자를 입력해주세요.');
+        var value2 = prompt('2번 숫자를 입력해주세요.');
+        var value3 = prompt('3번 숫자를 입력해주세요.');
+        var value4 = prompt('4번 숫자를 입력해주세요.');
+        var value5 = prompt('5번 숫자를 입력해주세요.');
+        var value6 = prompt('6번 숫자를 입력해주세요.');
+        var value7 = prompt('7번 숫자를 입력해주세요.');
+        var value8 = prompt('8번 숫자를 입력해주세요.');
+        var value9 = prompt('9번 숫자를 입력해주세요.');
+        var value10 = prompt('10번 숫자를 입력해주세요.');
 
-             for문을 사용하여 열 개의 숫자를 입력받은 후,
-             평균값을 계산하는 프로그램입니다.
-         */
+        var num1 = Number(value1);
+        var num2 = Number(value2);
+        var num3 = Number(value3);
+        var num4 = Number(value4);
+        var num5 = Number(value5);
+        var num6 = Number(value6);
+        var num7 = Number(value7);
+        var num8 = Number(value8);
+        var num9 = Number(value9);
+        var num10 = Number(value10);
 
-        // 총합을 저장하기 위한 변수
-        var sum = 0;
+        // 평균값을 계산한다
+        var avg = (num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10) / 10;
 
-        // i가 1부터 10이 될 때 까지 순차적으로 1씩 증가
-        for (var i = 1; i <= 10; i++) {
-            var value = prompt(i + "번 숫자를 입력해주세요.");
-
-            // 입력받은 문자열을 정수로 변환하여 총합 변수에 더함
-            sum += parseInt(value);
-        }
-
-        var avg = sum / 10;
-
-        alert("평균값: " + avg);
+        alert('평균값: ' + avg);
     </script>
 </head>
 <body>

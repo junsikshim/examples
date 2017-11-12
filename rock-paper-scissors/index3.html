@@ -10,81 +10,13 @@
         }
     </style>
 
-    <script>
-
-        // '가위' 버튼 클릭 핸들러
-        function onScissors() {
-            var comInput;
-            var rnd = Math.random();
-
-            if (rnd < 0.33) {
-                comInput = "가위";
-            } else if (rnd < 0.66) {
-                comInput = "바위";
-            } else {
-                comInput = "보";
-            }
-
-            if (comInput === "가위") {
-                alert("컴퓨터: " + comInput + " - 비겼습니다.");
-            } else if (comInput === "바위") {
-                alert("컴퓨터: " + comInput + " - 졌습니다...");
-            } else {
-                alert("컴퓨터: " + comInput + " - 이겼습니다!!");
-            }
-        }
-
-        // '바위' 버튼 클릭 핸들러
-        function onRock() {
-            var comInput;
-            var rnd = Math.random();
-
-            if (rnd < 0.33) {
-                comInput = "가위";
-            } else if (rnd < 0.66) {
-                comInput = "바위";
-            } else {
-                comInput = "보";
-            }
-
-            if (comInput === "가위") {
-                alert("컴퓨터: " + comInput + " - 이겼습니다!!");
-            } else if (comInput === "바위") {
-                alert("컴퓨터: " + comInput + " - 비겼습니다.");
-            } else {
-                alert("컴퓨터: " + comInput + " - 졌습니다...");
-            }
-        }
-
-        // '보' 버튼 클릭 핸들러
-        function onPaper() {
-            var comInput;
-            var rnd = Math.random();
-
-            if (rnd < 0.33) {
-                comInput = "가위";
-            } else if (rnd < 0.66) {
-                comInput = "바위";
-            } else {
-                comInput = "보";
-            }
-
-            if (comInput === "가위") {
-                alert("컴퓨터: " + comInput + " - 졌습니다...");
-            } else if (comInput === "바위") {
-                alert("컴퓨터: " + comInput + " - 이겼습니다!!");
-            } else {
-                alert("컴퓨터: " + comInput + " - 비겼습니다.");
-            }
-        }
-
-    </script>
+    <script src="js/scripts2.js"></script>
 </head>
 <body>
     <div>
-        <button onclick="onScissors()">가위</button>
-        <button onclick="onRock()">바위</button>
-        <button onclick="onPaper()">보</button>
+        <button onclick="onScissorsClick()">가위</button>
+        <button onclick="onRockClick()">바위</button>
+        <button onclick="onPaperClick()">보</button>
     </div>
 </body>
 </html>

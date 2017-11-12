@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>평균값 계산기</title>
+
+    <script>
+        /*
+             평균값 계산기
+
+             for문을 사용하여 열 개의 숫자를 입력받은 후,
+             평균값을 계산하는 프로그램입니다.
+         */
+
+        // 전체 숫자의 갯수
+        var totalNumbers = Number(prompt('숫자의 갯수를 입력해주세요.'));
+
+        // 총합을 저장하기 위한 변수
+        var sum = 0;
+
+        // i가 1부터 10이 될 때 까지 순차적으로 1씩 증가
+        for (var i = 1; i <= totalNumbers; i++) {
+            var value = prompt(i + '번 숫자를 입력해주세요.');
+
+            // 입력받은 문자열을 정수로 변환하여 총합 변수에 더함
+            sum += Number(value);
+        }
+
+        // 평균값을 계산한다
+        var avg = sum / totalNumbers;
+
+        alert('평균값: ' + avg);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

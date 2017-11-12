@@ -5,23 +5,16 @@
     <title>평균값 계산기</title>
 
     <script>
-        /*
-             평균값 계산기
+        var value1 = prompt('1번 숫자를 입력해주세요.');
+        var value2 = prompt('2번 숫자를 입력해주세요.');
 
-             두 개의 숫자를 입력받아 평균값을 계산하는 프로그램입니다.
-         */
+        var num1 = Number(value1);
+        var num2 = Number(value2);
 
-        var value1 = prompt("1번 숫자를 입력해주세요.");
-        var value2 = prompt("2번 숫자를 입력해주세요.");
-
-        // parseInt()를 사용하여 문자열을 정수로 변환
-        var num1 = parseInt(value1);
-        var num2 = parseInt(value2);
-
-        // 평균값 계산
+        // 평균값을 계산한다
         var avg = (num1 + num2) / 2;
 
-        alert("평균값: " + avg);
+        alert('평균값: ' + avg);
     </script>
 </head>
 <body>

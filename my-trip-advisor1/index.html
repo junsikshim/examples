@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>마이트립 어드바이저</title>
+
+    <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <script src="libs/jquery-3.2.1.min.js"></script>
+    <script src="libs/jquery-ui/jquery-ui.min.js"></script>
+
+    <script src="scripts/index.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div>
+                <a href="index.html"><span></span></a>
+                <div class="menu-items right">
+                    <a href="register.html">회원가입</a>
+                    <img src="images/line_maintop_gray.png" />
+                    <a href="javascript:showLogin()">로그인</a>
+                </div>
+            </div>
+        </div>
+        <div id="body">
+            <div id="title-text" class="lg-text">어디로 떠나볼까요?</div>
+            <div id="title-sub-text" class="md-text">Where do you want to go?</div>
+            <div id="search-panel">
+                <form id="form-search">
+                    <div class="panel-block">
+                        <label for="calendar">일정이 언제에요?</label>
+                        <div>
+                            <input type="text" id="calendar" />
+                        </div>
+                    </div>
+                    <div class="panel-block">
+                        <label for="city">어디로 가고 싶으세요?</label>
+                        <div>
+                            <input type="text" id="city" />
+                        </div>
+                    </div>
+                    <div class="panel-block no-margin">
+                        <button type="submit" class="btn-search">
+                            <img src="images/icon_search_on.png" />
+                            검색
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div id="list-panel"></div>
+        </div>
+    </div>
+
+    <div id="login" class="black-bg">
+        <div class="login-box sm-box">
+            <div>
+                <span class="blue">마이트립</span> <span class="black">어드바이저</span>
+            </div>
+            <span>로그인 정보를 입력하세요.</span>
+            <form>
+                <input type="text" name="email" placeholder="이메일 주소" />
+                <input type="password" name="password" placeholder="비밀번호" />
+                <button type="submit">로그인</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

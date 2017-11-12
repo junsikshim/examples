@@ -1,12 +1,6 @@
 .container {
-    position: absolute;
     width: 700px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 80px;
-    top: 50px;
+    margin: 50px auto 80px;
 }
 
 .header {
@@ -21,10 +15,9 @@
     color: #bd5a00;
 }
 
-.div-search {
+.search {
     display: inline-block;
-    position: absolute;
-    right: 0;
+    float: right;
     margin: 7px;
 }
 
@@ -34,8 +27,6 @@
     border: 1px solid #ffecd9;
     border-radius: 7px;
     background-color: #fff6eb;
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
     vertical-align: middle;
     outline: none;
@@ -50,19 +41,22 @@
     border-radius: 7px;
     background-color: #fff;
     margin-left: 3px;
-    padding: 0;
     vertical-align: middle;
     outline: none;
     cursor: pointer;
 }
 
-.div-total {
+.total {
     margin: 20px 10px 7px;
     font-size: 13px;
     color: #bd5a00;
 }
 
-.div-item {
+#item-template {
+    display: none;
+}
+
+.item {
     padding: 10px 20px;
     border: 1px solid #d2d2d2;
     border-radius: 14px;

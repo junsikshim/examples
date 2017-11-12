@@ -20,20 +20,20 @@
 
         var userInput = prompt("가위, 바위, 보!");
 
+        var str = "컴퓨터: " + comInput;
+
         // 컴퓨터 패와 유저의 패를 비교
         switch (userInput) {
             case "가위":
                 switch (comInput) {
                     case "가위":
-                        alert("컴퓨터: " + comInput + " - 비겼습니다.");
+                        alert(str + " - 비겼습니다.");
                         break;
-
                     case "바위":
-                        alert("컴퓨터: " + comInput + " - 졌습니다...");
+                        alert(str + " - 졌습니다...");
                         break;
-
                     default:
-                        alert("컴퓨터: " + comInput + " - 이겼습니다!!");
+                        alert(str + " - 이겼습니다!!");
                         break;
                 }
 
@@ -42,15 +42,13 @@
             case "바위":
                 switch (comInput) {
                     case "가위":
-                        alert("컴퓨터: " + comInput + " - 이겼습니다!!");
+                        alert(str + " - 이겼습니다!!");
                         break;
-
                     case "바위":
-                        alert("컴퓨터: " + comInput + " - 비겼습니다.");
+                        alert(str + " - 비겼습니다.");
                         break;
-
                     default:
-                        alert("컴퓨터: " + comInput + " - 졌습니다...");
+                        alert(str + " - 졌습니다...");
                         break;
                 }
 
@@ -59,15 +57,13 @@
             default:
                 switch (comInput) {
                     case "가위":
-                        alert("컴퓨터: " + comInput + " - 졌습니다...");
+                        alert(str + " - 졌습니다...");
                         break;
-
                     case "바위":
-                        alert("컴퓨터: " + comInput + " - 이겼습니다!!");
+                        alert(str + " - 이겼습니다!!");
                         break;
-
                     default:
-                        alert("컴퓨터: " + comInput + " - 비겼습니다.");
+                        alert(str + " - 비겼습니다.");
                         break;
                 }
         }
