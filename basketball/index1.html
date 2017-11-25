@@ -5,9 +5,6 @@
     <title>농구게임 만들기</title>
 
     <link rel="stylesheet" href="css/basketball.css"/>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="js/basketball1.js"></script>
 </head>
 <body>
     <div class="div-scoreboard">
@@ -31,14 +28,16 @@
     <div class="div-control-panel">
         <div id="div-computer" class="div-panel">
             <div class="div-control-name">컴퓨터</div>
-            <button id="btn-computer" class="btn-computer" onclick="onComputerShoot()">슛하기</button>
+            <button id="btn-computer" class="btn-computer">슛하기</button>
         </div>
 
         <div id="div-user" class="div-panel">
             <div class="div-control-name">유저</div>
-            <button id="btn-2point" class="btn-user" onclick="onUserShoot(2)" disabled>2점슛</button>
-            <button id="btn-3point" class="btn-user" onclick="onUserShoot(3)" disabled>3점슛</button>
+            <button id="btn-2point" class="btn-user" disabled>2점슛</button>
+            <button id="btn-3point" class="btn-user" disabled>3점슛</button>
         </div>
     </div>
+
+    <script src="js/basketball1.js"></script>
 </body>
 </html>
