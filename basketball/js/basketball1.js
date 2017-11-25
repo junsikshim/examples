@@ -4,6 +4,17 @@ var userScore = 0;
 var userShotsLeft = 15;
 var isGameOver = false;
 
+// 이벤트 핸들러 등록
+document.getElementById('btn-computer').onclick = onComputerShoot;
+
+document.getElementById('btn-2point').onclick = function() {
+    onUserShoot(2);
+};
+
+document.getElementById('btn-3point').onclick = function() {
+    onUserShoot(3);
+};
+
 // '슛하기' 버튼 클릭 핸들러
 function onComputerShoot() {
     // 게임오버 상태라면 리턴
@@ -19,19 +30,19 @@ function onComputerShoot() {
 
     if (shootType === 2) {              // 2점슛이라면
         if (Math.random() < 0.5) {      // 1/2 확률로 성공
-            $("#text").html("컴퓨터가 2점슛을 성공시켰습니다!");
+            document.getElementById('text').innerHTML = '컴퓨터가 2점슛을 성공시켰습니다!';
             comScore += 2;
-            $("#computer-score").html(comScore);
+            document.getElementById('computer-score').innerHTML = comScore;
         } else {                        // 실패 시
-            $("#text").html("컴퓨터가 2점슛을 실패했습니다.");
+            document.getElementById('text').innerHTML = '컴퓨터가 2점슛을 실패했습니다.';
         }
     } else {                            // 3점슛이라면
         if (Math.random() < 0.33) {     // 1/3 확률로 성공
-            $("#text").html("컴퓨터가 3점슛을 성공시켰습니다!");
+            document.getElementById('text').innerHTML = '컴퓨터가 3점슛을 성공시켰습니다!';
             comScore += 3;
-            $("#computer-score").html(comScore);
+            document.getElementById('computer-score').innerHTML = comScore;
         } else {                        // 실패 시
-            $("#text").html("컴퓨터가 3점슛을 실패했습니다.");
+            document.getElementById('text').innerHTML = '컴퓨터가 3점슛을 실패했습니다.';
         }
     }
 
@@ -39,8 +50,10 @@ function onComputerShoot() {
     isComputerTurn = false;
 
     // 컴퓨터 버튼 비활성화 및 유저 버튼 활성화
-    $(".btn-computer").prop("disabled", true);
-    $(".btn-user").prop("disabled", false);
+    document.getElementById('btn-computer').disabled = true;
+    for (var i = 0; i < 2; i++) {
+        document.getElementsByClassName('btn-user')[i].disabled = false;
+    }
 }
 
 // '2점슛', '3점슛' 버튼 클릭 핸들러
@@ -55,19 +68,19 @@ function onUserShoot(shootType) {
 
     if (shootType === 2) {              // 2점슛이라면
         if (Math.random() < 0.5) {      // 1/2 확률로 성공
-            $("#text").html("2점슛이 성공했습니다!");
+            document.getElementById('text').innerHTML = '2점슛이 성공했습니다!';
             userScore += 2;
-            $("#user-score").html(userScore);
+            document.getElementById('user-score').innerHTML = userScore;
         } else {                        // 실패 시
-            $("#text").html("2점슛이 실패했습니다.");
+            document.getElementById('text').innerHTML = '2점슛이 실패했습니다.';
         }
     } else {                            // 3점슛이라면
         if (Math.random() < 0.33) {     // 1/3 확률로 성공
-            $("#text").html("3점슛이 성공했습니다!");
+            document.getElementById('text').innerHTML = '3점슛이 성공했습니다!';
             userScore += 3;
-            $("#user-score").html(userScore);
+            document.getElementById('user-score').innerHTML = userScore;
         } else {                        // 실패 시
-            $("#text").html("3점슛이 실패했습니다.");
+            document.getElementById('text').innerHTML = '3점슛이 실패했습니다.';
         }
     }
 
@@ -75,24 +88,26 @@ function onUserShoot(shootType) {
     userShotsLeft--;
 
     // 남은 슛 횟수 UI 업데이트
-    $("#shots-left").html(userShotsLeft);
+    document.getElementById('shots-left').innerHTML = userShotsLeft;
 
     // 만약 남은 슛 횟수가 0이라면, 즉 게임 종료라면
     if (userShotsLeft === 0) {
         // 승리 조건 비교
         if (userScore > comScore)
-            $("#text").html("승리했습니다!");
+            document.getElementById('text').innerHTML = '승리했습니다!';
         else if (userScore < comScore)
-            $("#text").html("아쉽게도 졌습니다...");
+            document.getElementById('text').innerHTML = '아쉽게도 졌습니다...';
         else
-            $("#text").html("비겼습니다.");
+            document.getElementById('text').innerHTML = '비겼습니다.';
 
         // 게임오버 상태로 변경
         isGameOver = true;
 
         // 모든 버튼 비활성화
-        $(".btn-computer").prop("disabled", true);
-        $(".btn-user").prop("disabled", true);
+        document.getElementById('btn-computer').disabled = true;
+        for (var i = 0; i < 2; i++) {
+            document.getElementsByClassName('btn-user')[i].disabled = true;
+        }
 
         return;
     }
@@ -101,6 +116,8 @@ function onUserShoot(shootType) {
     isComputerTurn = true;
 
     // 컴퓨터 버튼 활성화 및 유저 버튼 비활성화
-    $(".btn-computer").prop("disabled", false);
-    $(".btn-user").prop("disabled", true);
+    document.getElementById('btn-computer').disabled = false;
+    for (var i = 0; i < 2; i++) {
+        document.getElementsByClassName('btn-user')[i].disabled = true;
+    }
 }
