@@ -1,3 +1,5 @@
+/* 공통 */
+
 @font-face {
     font-family: 'Heebo';
     src: url('../fonts/Heebo-Regular.ttf') format('truetype');
@@ -16,14 +18,141 @@ html, body {
     height: 100%;
 }
 
-#body {
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/bg_main.png');
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
+body {
+    min-height: 100%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.blue {
+    color: #4299E1;
+}
+
+.black {
+    color: #000;
+}
+
+.ui-datepicker {
+    width: 321px;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.right {
+    float: right;
+}
+
+.lg-text {
+    font-family: 'Heebo', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.md-text {
+    font-family: 'Heebo', sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    color: #fff;
+}
+
+.ui-datepicker {
+    width: 321px;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.white-bg {
+    background-color: #F5F7F8;
+}
+
+.black-bg {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.gray-bg {
+    background-color: #F6F7F7;
+}
+
+.form-box {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.sm-box {
+    width: 490px;
+    height: 420px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
     background-color: #fff;
+}
+
+.md-box {
+    width: 610px;
+    height: 740px;
+    background-color: #fff;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    margin: 150px auto 150px;
+}
+
+.form-box .title {
+    font-size: 28px;
+    text-align: center;
+}
+
+.form-box .sub-title {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 35px;
+    font-size: 15px;
+    color: #bbb;
+    text-align: center;
+}
+
+.form-box input[type="text"],
+.form-box input[type="email"],
+.form-box input[type="password"] {
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    color: #505050;
+    font-size: 17px;
+    margin-bottom: 12px;
+    padding: 22px;
+}
+
+.form-box button {
+    display: inline-block;
+    color: #fff;
+    background-color: #4299E1;
+    border: 0;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.form-box.sm-box input[type="text"],
+.form-box.sm-box input[type="email"],
+.form-box.sm-box input[type="password"],
+.form-box.sm-box button {
+    width: 370px;
+    height: 55px;
+}
+
+.form-box.md-box input[type="text"],
+.form-box.md-box input[type="email"],
+.form-box.md-box input[type="password"],
+.form-box.md-box button {
+    width: 470px;
+    height: 55px;
 }
 
 #header {
@@ -33,13 +162,13 @@ html, body {
     width: 100%;
     height: 50px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 100;
     transition: 0.2s;
 }
 
-#header.fixed {
+#header.inverted {
     background-color: #fff;
     border: 0;
-    transition: 0.2s;
 }
 
 #header span {
@@ -49,7 +178,7 @@ html, body {
     background-image: url('../images/image_logo_white.png');
 }
 
-#header.fixed span {
+#header.inverted span {
     background-image: url('../images/image_logo_color.png');
 }
 
@@ -78,17 +207,29 @@ html, body {
     margin-right: 20px;
 }
 
-#header.fixed .menu-items a {
+#header.inverted .menu-items a {
     color: #000;
 }
 
-#login {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+.container {
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* 메인 */
+
+#body {
+    width: 100%;
+    height: 100%;
+    min-height: 1000px;
+    background-image: url('../images/bg_main.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fff;
+    overflow: auto;
 }
 
 #title-text {
@@ -102,12 +243,9 @@ html, body {
 }
 
 #search-panel {
-    margin-top: 110px;
-    margin-bottom: 570px;
+    margin: 110px auto 570px;
     left: 0;
     right: 0;
-    margin-left: auto;
-    margin-right: auto;
     width: 1080px;
     background-color: #fff;
     padding: 50px 75px 55px;
@@ -119,7 +257,11 @@ html, body {
 
 .panel-block {
     display: inline-block;
-    margin-right: 25px;
+    margin-right: 17px;
+}
+
+.panel-block:last-of-type {
+    vertical-align: bottom;
 }
 
 #search-panel label {
@@ -140,7 +282,7 @@ html, body {
 }
 
 #search-panel .btn-search {
-    width: 210px;
+    width: 205px;
     height: 55px;
     background-color: #4299e1;
     border: 0;
@@ -148,119 +290,283 @@ html, body {
     font-size: 18px;
 }
 
-#list-panel {
+#search-panel .btn-search img {
+    vertical-align: middle;
+}
+
+#list-bg {
+    display: none;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    top: 880px;
     position: absolute;
-    top: 1000px;
+}
+
+#list-panel {
+    position: relative;
+    top: 95px;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
     width: 1080px;
+    margin-bottom: 100px;
+}
+
+#list-item-template {
+    display: none;
+}
+
+.list-item {
+    position: relative;
+    display: inline-block;
+    width: 344px;
+    margin-right: 24px;
+    margin-bottom: 22px;
+}
+
+.list-item:hover {
+    cursor: pointer;
+}
+
+.list-item:nth-of-type(3n) {
+    margin-right: 0;
+}
+
+.list-item-image {
+    display: block;
+    width: 344px;
+    height: 210px;
+}
+
+.list-item-desc {
+    border: 1px solid #eee;
+    border-top: 0;
+}
+
+.list-item-name {
+    height: 24px;
+    padding-left: 13px;
+    padding-top: 13px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.list-item-city {
+    height: 20px;
+    padding-bottom: 8px;
+    padding-left: 13px;
+    line-height: 16px;
+}
+
+.list-item-city img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.list-item-city-name {
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+/* 상세보기 */
+
+#body.detail {
+    background: #f6f7f7;
+}
+
+.detail-container, .mytrip-container {
+    width: 1080px;
+    margin-top: 130px;
+    margin-bottom: 70px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.detail-header {
+    line-height: 20px;
+    position: relative;
+    padding-top: 7px;
+    padding-bottom: 3px;
+}
+
+.detail-header img {
+    vertical-align: middle;
+}
+
+.detail-header .detail-header-name {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    vertical-align: middle;
+    margin-left: 3px;
+}
+
+.detail-header .detail-header-city-name {
+    display: inline-block;
+    font-size: 15px;
+    vertical-align: middle;
+    color: #909090;
+}
+
+.detail-header button {
+    padding: 7px 10px;
+    background-color: #4299E0;
+    color: #fff;
+    font-size: 14px;
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#detail-images {
+    max-width: 100%;
+    height: 400px;
+    background: #000;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.detail-desc {
+    margin-bottom: 30px;
+}
+
+.detail-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.detail-desc .detail-desc-text {
+    font-size: 15px;
+    color: #757575;
+}
+
+.detail-container #map {
+    width: 100%;
+    height: 300px;
+}
+
+/* 마이트립 */
+
+.mytrip-container #map {
+    display: inline-block;
+    width: 580px;
+    height: 500px;
+    margin-right: 10px;
+}
+
+.mytrip-container #mytrip-list {
+    display: inline-block;
+    width: 480px;
+    height: 500px;
+    overflow: auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#mytrip-item-template {
+    display: none;
+}
+
+.mytrip-container li {
+    position: relative;
+    margin: 0 3px 10px 3px;
+    padding: 15px 20px;
+    border: 1px solid #D7DBE2;
+    width: 470px;
+    height: 60px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 7px -3px rgba(0, 0, 0, 0.2);
     background-color: #fff;
 }
 
-#register {
-    width: 100%;
-    height: 100%;
-    padding-top: 50px;
+.mytrip-container span {
+    display: inline-block;
+    vertical-align: middle;
+    height: 30px;
+    line-height: 30px;
 }
 
-.right {
-    float: right;
+.mytrip-container .item-handle {
+    width: 22px;
+    height: 18px;
+    background-image: url('../images/btn_change.png');
 }
 
-.lg-text {
-    font-family: 'Heebo';
-    font-size: 80px;
+.mytrip-container .item-icon {
+    width: 13px;
+    height: 16px;
+    margin-left: 7px;
+    background-image: url('../images/icon_list_location.png');
+}
+
+.mytrip-container .item-name {
+    font-size: 15px;
     font-weight: bold;
-    color: #fff;
+    color: #444;
 }
 
-.md-text {
-    font-family: 'Heebo';
-    font-size: 25px;
-    font-weight: normal;
-    color: #fff;
+.mytrip-container .item-line {
+    width: 2px;
+    height: 16px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-image: url('../images/line_location_gray.png');
 }
 
-.no-margin {
-    margin: 0;
+.mytrip-container .item-city-name {
+    font-size: 13px;
+    color: #909090;
 }
 
-.white-bg {
-    background-color: #F5F7F8;
-}
-
-.black-bg {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.login-box {
+.mytrip-container .item-remove {
     position: absolute;
-    margin: auto;
+    width: 16px;
+    height: 16px;
+    right: 20px;
+    top: 21px;
+    background-image: url('../images/btn_close.png');
+}
+
+/* 회원가입 */
+
+.form-box .inner { padding: 60px 70px; }
+#form-register { font-size: 15px; }
+#inp-password { margin-top: 26px; }
+.div-gender { margin-top: 12px; }
+.div-gender .txt-warning { margin-top: 2px; }
+#inp-female { margin-left: 20px; }
+.div-birth { margin-top: 17px; }
+.div-birth .txt-warning { margin-top: 10px; }
+#inp-accept { margin-top: 30px; }
+#btn-submit { margin-top: 50px; }
+.overflow { height: 200px; }
+#btn-back { background-color: #A4AAB2; }
+.ui-selectmenu-text { color: #505050; font-weight: 400; }
+.ui-state-active, .ui-widget-content .ui-state-active { color: #000; }
+#sel-birth-button { background: #fff; border: 1px solid #ccc; }
+.div-accept .txt-warning { margin-top: 27px; }
+
+.txt-warning {
+    display: none;
+    font-size: 13px;
+    color: red;
+    margin-top: -5px;
+}
+
+/* 로그인 */
+
+#login {
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    text-align: center;
-}
-
-.login-box > div {
-    display: block;
-    margin-top: 54px;
-    font-size: 28px;
-}
-
-.login-box > span {
-    display: block;
-    margin-top: 8px;
-    margin-bottom: 35px;
-    font-size: 15px;
-    color: #bbb;
-}
-
-.login-box input {
-    display: inline-block;
-    width: 370px;
-    height: 55px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    color: #ccc;
-    font-size: 18px;
-    margin-bottom: 12px;
-    padding: 22px;
-}
-
-.login-box button {
-    display: inline-block;
-    width: 370px;
-    height: 70px;
-    color: #fff;
-    background-color: #4299E1;
-    border: 0;
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.sm-box {
-    width: 490px;
-    height: 420px;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-}
-
-.md-box {
-    width: 610px;
-    height: 810px;
-    background-color: #fff;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-    margin: 100px auto 150px;
-}
-
-.blue {
-    color: #4299E1;
-}
-
-.black {
-    color: #000;
+    width: 100%;
+    height: 100%;
 }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>마이트립 어드바이저 - 마이트립</title>
+
+  <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+
+  <script src="libs/jquery-3.3.1.min.js"></script>
+  <script src="libs/js.cookie.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhOgZ8XupIeIDtrOvmHaKOWRPY6cz6bR0"></script>
+  <script src="scripts/mytrip.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div id="header" class="inverted">
+      <div>
+        <a href="index.html"><span></span></a>
+        <div class="menu-items right">
+          <a href="mytrip.html">마이트립</a>
+          <img src="images/line_maintop_gray.png" />
+          <a href="register.html">회원가입</a>
+        </div>
+      </div>
+    </div>
+    <div id="body" class="detail">
+      <div class="mytrip-container">
+        <div id="map"></div>
+        <ul id="mytrip-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <li class="mytrip-item" id="mytrip-item-template">
+    <span class="item-icon"></span>
+    <span class="item-name"></span>
+    <span class="item-line"></span>
+    <span class="item-city-name"></span>
+    <span class="item-remove"></span>
+  </li>
+
+</body>
+</html>

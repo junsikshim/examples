@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>농구게임 만들기</title>
 
-    <link rel="stylesheet" href="css/basketball.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="js/basketball1.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+    <script src="js/scripts1.js"></script>
 </head>
 <body>
     <div class="div-scoreboard">
@@ -21,7 +24,7 @@
                 <div id="computer-score" class="div-score-number">0</div>
             </div>
             <div class="div-score">
-                <div class="div-score-name">유저</div>
+                <div class="div-score-name">사용자</div>
                 <div id="user-score" class="div-score-number">0</div>
             </div>
             <div id="text">컴퓨터부터 시작합니다!</div>
@@ -31,13 +34,13 @@
     <div class="div-control-panel">
         <div id="div-computer" class="div-panel">
             <div class="div-control-name">컴퓨터</div>
-            <button id="btn-computer" class="btn-computer" onclick="onComputerShoot()">슛하기</button>
+            <button class="btn-computer" onclick="onComputerShoot()">슛하기</button>
         </div>
 
         <div id="div-user" class="div-panel">
-            <div class="div-control-name">유저</div>
-            <button id="btn-2point" class="btn-user" onclick="onUserShoot(2)" disabled>2점슛</button>
-            <button id="btn-3point" class="btn-user" onclick="onUserShoot(3)" disabled>3점슛</button>
+            <div class="div-control-name">사용자</div>
+            <button class="btn-user" onclick="onUserShoot(2)" disabled>2점슛</button>
+            <button class="btn-user" onclick="onUserShoot(3)" disabled>3점슛</button>
         </div>
     </div>
 </body>

@@ -23,6 +23,8 @@ result.sort(function(a, b) {
   return a - b;
 });
 
+result.sort(compare);
+
 function compare(a, b) {
   return Math.random() - 0.5;
 }

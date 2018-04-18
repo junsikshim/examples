@@ -1,37 +1,69 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>마이트립 어드바이저</title>
+  <meta charset="UTF-8">
+  <title>마이트립 어드바이저</title>
 
-    <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
 
-    <script src="libs/jquery-3.2.1.min.js"></script>
-    <script src="libs/jquery-ui/jquery-ui.min.js"></script>
-    <script src="libs/sammy-latest.min.js"></script>
-    <script src="libs/sammy.template.js"></script>
+  <script src="libs/jquery-3.3.1.min.js"></script>
+  <script src="libs/jquery-ui/jquery-ui.min.js"></script>
 
-    <script src="scripts/app.js"></script>
+  <script src="scripts/scripts.js"></script>
 </head>
 <body>
-    <div id="container">
-        <div id="header"></div>
-        <div id="body"></div>
+  <div id="container">
+    <div id="header">
+      <div>
+        <a href="index.html"><span></span></a>
+        <div class="menu-items right">
+          <a href="mytrip.html">마이트립</a>
+          <img src="images/line_maintop_gray.png" />
+          <a href="register.html">회원가입</a>
+        </div>
+      </div>
+    </div>
+    <div id="body">
+      <div id="title-text" class="lg-text">어디로 떠나볼까요?</div>
+      <div id="title-sub-text" class="md-text">Where do you want to go?</div>
+      <div id="search-panel">
+        <form id="form-search">
+          <div class="panel-block">
+            <label for="from">일정이 언제에요?</label>
+            <div>
+              <input type="text" id="from" readonly />
+            </div>
+          </div>
+          <div class="panel-block">
+            <label for="to">언제까지에요?</label>
+            <div>
+              <input type="text" id="to" readonly />
+            </div>
+          </div>
+          <div class="panel-block no-margin">
+            <button type="submit" class="btn-search">
+              <img src="images/icon_search_on.png" />
+              검색
+            </button>
+          </div>
+        </form>
+      </div>
+      <div id="list-bg">
+        <div id="list-panel"></div>
+      </div>
     </div>
 
-    <div id="login" class="black-bg">
-        <div class="login-box sm-box">
-            <div>
-                <span class="blue">마이트립</span> <span class="black">어드바이저</span>
-            </div>
-            <span>로그인 정보를 입력하세요.</span>
-            <form>
-                <input type="text" name="email" placeholder="이메일 주소" />
-                <input type="password" name="password" placeholder="비밀번호" />
-                <button type="submit">로그인</button>
-            </form>
+    <div id="list-item-template" class="list-item">
+      <img class="list-item-image" />
+      <div class="list-item-desc">
+        <div class="list-item-name"></div>
+        <div class="list-item-city">
+          <img src="images/icon_list_location.png" />
+          <div class="list-item-city-name" />
         </div>
+      </div>
     </div>
+  </div>
 </body>
 </html>
