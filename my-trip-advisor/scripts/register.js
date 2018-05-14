@@ -1,7 +1,8 @@
 $(function() {
   generateYears($('#sel-birth'));
 
-  $('#sel-birth').selectmenu().selectmenu("menuWidget").addClass('overflow');
+  var birthSelect = $('#sel-birth').selectmenu();
+  birthSelect.selectmenu('menuWidget').addClass('overflow');
 
   $('#form-register').submit(function(e) {
     e.preventDefault();

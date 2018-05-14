@@ -23,11 +23,6 @@ result.sort(function(a, b) {
   return a - b;
 });
 
-result.sort(compare);
-
-function compare(a, b) {
-  return Math.random() - 0.5;
-}
 
 for (var i = 0; i < 6; i++) {
   document.write('<span class="ball">' + result[i] + '</span>');
